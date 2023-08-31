@@ -1,0 +1,136 @@
+* {
+    /* ajustes basicos da pagina */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* cor do fundo da pagina */
+    background-color: #d8d8e1;
+}
+
+canvas {
+    background-color: white;
+    /* cor do paint */
+    border-radius: 8px;
+    /* borda do paint */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* sombra borda paint */
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    /* centralizar o menu do paint na tela */
+    display: flex;
+    /* centralizar o menu do paint na tela */
+    align-items: center;
+    /* centralizar o menu do paint na tela */
+    justify-content: center;
+    /* centralizar o menu do paint na tela */
+}
+
+.tool-box {
+    width: 100px;
+    /* tamanho box de ferramentas */
+    background-color: #fff;
+    /* cor box de ferramentas */
+    border-radius: 8px;
+    /* borda box de ferramentas */
+    box-shadow: 0 0 5px rgb(0, 0, 0.1);
+    /* sombra box caida de ferramentas */
+    margin-left: 40px;
+    /* posição box pra direita de ferramentas */
+    padding: 10px;
+    /* espaçamento pra cima box de ferramentas */
+    display: flex;
+    /* ajuste box de ferramentas no background */
+    flex-direction: column;
+    /* transforma box de ferramentas em coluna */
+    gap: 10px;
+    /* espaçamento pra cima box de ferramentas */
+    margin-bottom: 20px;
+    /* espaçamento pra cima box de ferramentas */
+}
+
+.button__tool,
+.button__size {
+    height: 45px;
+    /* espaçamento box de ferramentas */
+    border: none;
+    /* remove bordas dos icons box de ferramentas */
+    border-radius: 5px;
+    cursor: pointer;
+    /* transforma mouse qndo passa em cima em pointer box de ferramentas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* icons soltos no centro box de ferramentas */
+    background: none;
+    /* remove background do icon box de ferramentas */
+}
+
+.button__tool>span {
+    font-size: 1.8rem;
+    /* tamanho icons box de ferramentas */
+}
+
+.button__tool:hover,
+.button__size:hover {
+    background-color: #f2f2f2;
+    /* cor background passando mouse em cima do icon box de ferramentas */
+}
+
+.input__color {
+    /* botao de cor icon box de ferramentas */
+    width: 45px;
+    /* LARGURA botao de cor icon box de ferramentas */
+    height: 45px;
+    /* ALTURA botao de cor icon box de ferramentas */
+    border: none;
+    /* REMOVE BORDA botao de cor icon box de ferramentas */
+    cursor: pointer;
+    padding: 5px 7px;
+    /* TAMANHO botao de cor icon box de ferramentas */
+}
+
+.input__color::-wbkit-color-swatch {
+    /* aba de cores icon box de ferramentas */
+    border-radius: 100px;
+}
+
+.button__size {
+    /* TAMANHO aba de cores icon box de ferramentas */
+    padding: 10px;
+    /* ALTURA aba de cores icon box de ferramentas */
+    height: auto;
+    /* aba de cores icon box de ferramentas */
+}
+
+.button__size>span {
+    width: 100%;
+    background-color: #000;  /* COR Espessura linhas */
+    border-radius: 100px;     /* BORDA Espessura linhas */
+    display: block;
+}
+
+.button__size[data-size="5"]> span {   /* Espessura linhas */
+    height: 5px;
+}
+
+.button__size[data-size="10"]> span {   /* Espessura linhas */
+    height: 10px;
+}
+
+.button__size[data-size="20"]> span {    /* Espessura linhas */
+    height: 20px;
+}
+
+.button__size[data-size="30"]> span {     /* Espessura linhas */
+    height: 30px;
+}
+
+.active {
+    background-color: #f2f2f2;
+}
